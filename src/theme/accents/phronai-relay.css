@@ -1,0 +1,22 @@
+/* Copyright 2024 @polkadot-cloud/polkadot-staking-dashboard authors & contributors
+SPDX-License-Identifier: GPL-3.0-only */
+
+.theme-phronai-relay {
+  --accent-color-primary-light: #c34bfb;
+  --accent-color-primary-dark: #b62bf6;
+
+  --accent-color-secondary-light: #5756f4;
+  --accent-color-secondary-dark: #4040fc; 
+
+  --accent-color-tertiary-light: #dedae8;
+  --accent-color-tertiary-dark: #32264c;
+
+  --accent-color-stroke-light: #c34bfb;
+  --accent-color-stroke-dark: #c34bfb;
+
+  --accent-color-transparent-light: rgb(195 75 251 / 5%);
+  --accent-color-transparent-dark: rgb(195 75 251 / 5%);
+
+  --accent-color-pending-light: rgb(195 75 251 / 50%);
+  --accent-color-pending-dark: rgb(195 75 251 / 50%);
+}

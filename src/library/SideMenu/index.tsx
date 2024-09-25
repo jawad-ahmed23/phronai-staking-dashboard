@@ -1,25 +1,25 @@
 // Copyright 2024 @polkadot-cloud/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: GPL-3.0-only
 
-import { faCompressAlt, faExpandAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faCompressAlt, faExpandAlt } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { capitalizeFirstLetter } from '@w3ux/utils';
 import throttle from 'lodash.throttle';
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SideMenuMaximisedWidth, PageWidthMediumThreshold } from 'consts';
 import { useApi } from 'contexts/Api';
-import { useHelp } from 'contexts/Help';
-import { useTheme } from 'contexts/Themes';
+// import { useHelp } from 'contexts/Help';
+// import { useTheme } from 'contexts/Themes';
 import { useUi } from 'contexts/UI';
 import type { UIContextInterface } from 'contexts/UI/types';
-import CogOutlineSVG from 'img/cog-outline.svg?react';
-import ForumSVG from 'img/forum.svg?react';
-import InfoSVG from 'img/info.svg?react';
-import LanguageSVG from 'img/language.svg?react';
-import LogoGithubSVG from 'img/logo-github.svg?react';
-import MoonOutlineSVG from 'img/moon-outline.svg?react';
-import SunnyOutlineSVG from 'img/sunny-outline.svg?react';
+// import CogOutlineSVG from 'img/cog-outline.svg?react';
+// import ForumSVG from 'img/forum.svg?react';
+// import InfoSVG from 'img/info.svg?react';
+// import LanguageSVG from 'img/language.svg?react';
+// import LogoGithubSVG from 'img/logo-github.svg?react';
+// import MoonOutlineSVG from 'img/moon-outline.svg?react';
+// import SunnyOutlineSVG from 'img/sunny-outline.svg?react';
 import { useOverlay } from 'kits/Overlay/Provider';
 import { useNetwork } from 'contexts/Network';
 import { Heading } from './Heading/Heading';
@@ -33,16 +33,16 @@ export const SideMenu = () => {
   const { t } = useTranslation('base');
   const { apiStatus } = useApi();
   const { networkData, network } = useNetwork();
-  const { mode, toggleTheme } = useTheme();
+  // const { mode, toggleTheme } = useTheme();
   const { openModal } = useOverlay().modal;
   const {
     setSideMenu,
     sideMenuOpen,
     sideMenuMinimised,
-    userSideMenuMinimised,
-    setUserSideMenuMinimised,
+    // userSideMenuMinimised,
+    // setUserSideMenuMinimised,
   }: UIContextInterface = useUi();
-  const { openHelp } = useHelp();
+  // const { openHelp } = useHelp();
 
   // listen to window resize to hide SideMenu
   useEffect(() => {
@@ -84,8 +84,8 @@ export const SideMenu = () => {
         <section>
           <Main />
           <div className="inner">
-            <Heading title={t('support')} minimised={sideMenuMinimised} />
-            <Secondary
+            {/* <Heading title={t('support')} minimised={sideMenuMinimised} /> */}
+            {/* <Secondary
               onClick={() => {
                 openHelp(null);
               }}
@@ -104,7 +104,7 @@ export const SideMenu = () => {
                 Svg: ForumSVG,
                 size: sideMenuMinimised ? '1.4em' : '1.2em',
               }}
-            />
+            /> */}
 
             <Separator />
             <Heading title={t('network')} minimised={sideMenuMinimised} />
@@ -127,7 +127,9 @@ export const SideMenu = () => {
           </div>
         </section>
 
-        <section>
+        <section></section>
+
+        {/* <section>
           <button
             type="button"
             onClick={() => setUserSideMenuMinimised(!userSideMenuMinimised)}
@@ -179,7 +181,7 @@ export const SideMenu = () => {
               <MoonOutlineSVG width="1.1em" height="1.1em" />
             </button>
           )}
-        </section>
+        </section> */}
       </Wrapper>
     </Side>
   );

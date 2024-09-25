@@ -48,12 +48,13 @@ declare global {
   }
 }
 
-export type NetworkName = 'polkadot' | 'kusama' | 'westend';
+export type NetworkName = 'polkadot' | 'kusama' | 'westend' | 'phronai';
 
 export type SystemChainId =
   | 'people-polkadot'
   | 'people-kusama'
-  | 'people-westend';
+  | 'people-westend'
+  | 'people-phronai';
 
 export type Networks = Record<string, Network>;
 

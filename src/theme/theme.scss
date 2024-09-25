@@ -4,7 +4,9 @@ SPDX-License-Identifier: GPL-3.0-only */
 /* light theme colors */
 .theme-light {
   --background-default: #efeeee;
-  --background-primary: #f8f7f7;
+  // --background-primary: #f8f7f7;
+  // --background-default: #fff;
+  --background-primary: #fff;
   --background-invert: #333;
   --background-list-item: rgb(238 238 238 / 100%);
   --background-modal-card: rgb(237 237 237 / 75%);

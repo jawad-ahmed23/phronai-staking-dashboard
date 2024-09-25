@@ -6,6 +6,7 @@ import KusamaInlineSVG from 'img/kusama_inline.svg?react';
 import PolkadotIconSVG from 'img/polkadot_icon.svg?react';
 import PolkadotInlineSVG from 'img/polkadot_inline.svg?react';
 import WestendIconSVG from 'img/westend_icon.svg?react';
+import PhronAIIconSVG from 'img/phronai_icon.svg?react';
 import WestendInlineSVG from 'img/westend_inline.svg?react';
 import PolkadotTokenSVG from 'config/tokens/svg/DOT.svg?react';
 import KusamaTokenSVG from 'config/tokens/svg/KSM.svg?react';
@@ -130,7 +131,7 @@ export const NetworkList: Networks = {
     name: 'westend',
     endpoints: {
       lightClient: 'westend2',
-      defaultRpcEndpoint: 'IBP-GeoDNS1',
+      defaultRpcEndpoint: 'Dwellir',
       rpcEndpoints: {
         Dwellir: 'wss://westend-rpc.dwellir.com',
         'Dwellir Tunisia': 'wss://westend-rpc-tn.dwellir.com',
@@ -177,6 +178,56 @@ export const NetworkList: Networks = {
     api: {
       unit: 'DOT',
       priceTicker: 'DOTUSDT',
+    },
+    defaultFeeReserve: 0.1,
+    maxExposurePageSize: new BigNumber(64),
+  },
+  phronai: {
+    name: 'phronai',
+    endpoints: {
+      lightClient: 'phronai',
+      defaultRpcEndpoint: 'phronai-testnet',
+      rpcEndpoints: {
+        'phronai-testnet': 'wss://testnet.phron.ai',
+      },
+    },
+    colors: {
+      primary: {
+        light: '#c34bfb',
+        dark: '#c34bfb',
+      },
+      secondary: {
+        light: '#5756f4',
+        dark: '#5756f4',
+      },
+      stroke: {
+        light: '#c34bfb',
+        dark: '#c34bfb',
+      },
+      transparent: {
+        light: 'rgb(195, 75, 251, 0.05)',
+        dark: 'rgb(195, 75, 251, 0.05)',
+      },
+      pending: {
+        light: 'rgb(195, 75, 251, 0.33)',
+        dark: 'rgb(195, 75, 251, 0.33)',
+      },
+    },
+    unit: 'PHR',
+    units: 12,
+    ss58: 42,
+    brand: {
+      icon: PhronAIIconSVG,
+      token: PhronAIIconSVG,
+      inline: {
+        svg: PhronAIIconSVG,
+        size: '0.96em',
+      },
+    },
+    api: {
+      unit: 'PHR',
+      // priceTicker: 'PHRUSDT',
+      priceTicker: 'BNBUSDT',
     },
     defaultFeeReserve: 0.1,
     maxExposurePageSize: new BigNumber(64),

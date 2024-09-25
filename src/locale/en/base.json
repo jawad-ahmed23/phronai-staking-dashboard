@@ -51,6 +51,7 @@
     "title_kusama": "Kusama Staking Dashboard",
     "title_polkadot": "Polkadot Staking Dashboard",
     "title_westend": "Westend Staking Dashboard",
+    "title_phronai": "PhronAI Staking Dashboard",
     "validators": "Validators"
   }
 }

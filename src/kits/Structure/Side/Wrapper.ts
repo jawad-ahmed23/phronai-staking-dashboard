@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.1, 1, 0.2, 1);
+  background-color: white;
 
   /* maximised by default, or minimised otherwise. */
   min-width: var(--core-side-width);

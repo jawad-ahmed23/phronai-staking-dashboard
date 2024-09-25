@@ -19,11 +19,13 @@ export const ThemesProvider = ({ children }: { children: ReactNode }) => {
   const localThemeRaw = localStorage.getItem('theme') || '';
 
   // Provide system theme if raw theme is not valid.
-  if (!['light', 'dark'].includes(localThemeRaw)) {
+  // 'light', 'dark'
+  if (!['light', 'light'].includes(localThemeRaw)) {
+    // ? 'dark'
     const systemTheme =
       window.matchMedia &&
       window.matchMedia('(prefers-color-scheme: dark)').matches
-        ? 'dark'
+        ? 'light'
         : 'light';
 
     initialTheme = systemTheme;
@@ -38,13 +40,13 @@ export const ThemesProvider = ({ children }: { children: ReactNode }) => {
   const themeRef = useRef(theme);
 
   // Automatically change theme on system change.
-  window
-    .matchMedia('(prefers-color-scheme: dark)')
-    .addEventListener('change', (event) => {
-      const newTheme = event.matches ? 'dark' : 'light';
-      localStorage.setItem('theme', newTheme);
-      setStateWithRef(newTheme, setTheme, themeRef);
-    });
+  // window
+  //   .matchMedia('(prefers-color-scheme: dark)')
+  //   .addEventListener('change', (event) => {
+  //     const newTheme = event.matches ? 'dark' : 'light';
+  //     localStorage.setItem('theme', newTheme);
+  //     setStateWithRef(newTheme, setTheme, themeRef);
+  //   });
 
   const toggleTheme = (maybeTheme: Theme | null = null): void => {
     const newTheme =

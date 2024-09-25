@@ -6,7 +6,6 @@ import { PageWidthMediumThreshold } from 'consts';
 
 export const Wrapper = styled.div`
   --network-bar-font-size: 0.9rem;
-
   background: var(--background-app-footer);
   color: var(--text-color-secondary);
   font-size: var(--network-bar-font-size);
@@ -21,6 +20,7 @@ export const Wrapper = styled.div`
   position: relative;
   padding-top: 0.15rem;
   width: 100%;
+  z-index: 10;
 
   @media (min-width: ${PageWidthMediumThreshold + 1}px) {
     position: fixed;
