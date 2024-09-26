@@ -9,7 +9,11 @@ export interface ItemProps {
   actionable: boolean;
 }
 
-type ValidatorSupportedChains = 'polkadot' | 'kusama' | 'westend' | 'phronai';
+export type ValidatorSupportedChains =
+  | 'polkadot'
+  | 'kusama'
+  | 'westend'
+  | 'phronai';
 
 export interface Item {
   bio?: string;

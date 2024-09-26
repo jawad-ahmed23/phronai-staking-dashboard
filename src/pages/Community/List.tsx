@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 // Copyright 2024 @polkadot-cloud/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: GPL-3.0-only
 
@@ -17,11 +18,13 @@ export const List = () => {
   const { validatorCommunity } = useCommunity();
 
   const [entityItems, setEntityItems] = useState<IItem[]>(
+    // @ts-ignore
     validatorCommunity.filter((v) => v.validators[network] !== undefined)
   );
 
   useEffect(() => {
     setEntityItems(
+      // @ts-ignore
       validatorCommunity.filter((v) => v.validators[network] !== undefined)
     );
   }, [network]);
